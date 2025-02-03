@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Home - FloverMatch{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center text-success mb-4">Nutritional Content Distribution</h1>
+    <div class="text-center">
+        <img src="{{ chart_path }}" alt="Nutritional Content Pie Chart" class="img-fluid rounded shadow-lg">
+    </div>
+    <div class="mt-3 text-center">
+        <a href="/" class="btn btn-success">Go Back to Home</a>
+    </div>
+</div>
+{% endblock %}

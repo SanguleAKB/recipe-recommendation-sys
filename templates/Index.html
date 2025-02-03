@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Home - FloverMatch{% endblock %}
+
+{% block content %}
+<div class="container pt-2">
+  <div class="d-flex flex-wrap gap-4">
+    {% if search_query is not none %}
+    {% for _, recipe in search_query.iterrows() %}
+        <div class="card" style="width: 18rem;">
+          <img src="{{ recipe.Images }}" class="card-img-top" alt="Recipe Image">
+            <div class="card-body">
+                <h6 class="card-title">Name: {{ recipe.Name }}</h6>
+                <h6 class="card-title">Rating: 4.5</h6> <!-- Update with actual rating if available -->
+                <h6 class="card-title">Time : {{ recipe['CookTime'] }}</h6> <!-- Add dynamic time if needed -->
+                <a href="/nutrition" class="btn btn-outline-success">View Recipe</a>
+            </div>
+        </div>
+    {% endfor %}
+    {% else %}
+    <p>No recipes found. Try searching for something else!</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

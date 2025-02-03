@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Home - FloverMatch{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center text-primary mb-4">Top Ingredients in Recipes</h1>
+    <div class="text-center">
+        <img src="{{ chart_path }}" alt="Top Ingredients Chart" class="img-fluid rounded shadow-lg">
+    </div>
+</div>
+{% endblock %}
