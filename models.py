@@ -11,9 +11,8 @@ CHART_PATH = os.path.join('static', 'top_ingredients_chart.png')
 PIE_CHART_PATH = os.path.join('static', 'pie_chart.png')
 
 word2vec_model = Word2Vec.load('word2vec_cbow.model')
-recipes = pd.read_csv('clean_df.csv')
+recipes = pd.read_csv('clean_DF.csv')
 recipes['IngredientList'] = recipes['IngredientList'].apply(ast.literal_eval)
-
 
 
 
@@ -61,7 +60,6 @@ def plot_top_ingredients(top_ingredients, save_path):
 def create_pie_chart(data, save_path):
     labels = data.index
     values = data.values
-
     plt.figure(figsize=(8, 8))
     plt.pie(values, labels=labels, autopct='%1.1f%%', startangle=140, colors=plt.cm.Paired.colors)
     plt.title('Nutritional Content Distribution', fontsize=16, fontweight='bold')

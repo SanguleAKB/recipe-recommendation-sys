@@ -43,6 +43,49 @@
 
     <!-- Page-Specific Content -->
     {% block content %}
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Nutrition Recommendation Form</h2>
+      <form action="/predict" method="post">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="calories" class="form-label">Calories</label>
+            <input type="text" class="form-control" name="calories" placeholder="Enter calories">
+          </div>
+          <div class="col-md-6">
+            <label for="fat" class="form-label">Fat</label>
+            <input type="text" class="form-control" id="fat" name="fat" placeholder="Enter fat">
+          </div>
+          <div class="col-md-6">
+            <label for="carbohydrates" class="form-label">Carbohydrate</label>
+            <input type="text" class="form-control" id="carbohydrate" name="carbohydrate" placeholder="Enter carbohydrate">
+          </div>
+          <div class="col-md-6">
+            <label for="protein" class="form-label">Protein</label>
+            <input type="text" class="form-control" id="protein" name="protein" placeholder="Enter protein">
+          </div>
+          <div class="col-md-6">
+            <label for="cholesterol" class="form-label">Cholesterol</label>
+            <input type="text" class="form-control" id="cholesterol" name="cholesterol" placeholder="Enter cholesterol">
+          </div>
+          <div class="col-md-6">
+            <label for="sodium" class="form-label">Sodium</label>
+            <input type="text" class="form-control" id="sodium" name="sodium" placeholder="Enter sodium">
+          </div>
+          <div class="col-md-6">
+            <label for="fiber" class="form-label">Fiber</label>
+            <input type="text" class="form-control" id="fiber" name="fiber" placeholder="Enter fiber">
+          </div>
+          <div class="col-md-6">
+            <label for="sugar" class="form-label">Sugar</label>
+            <input type="text" class="form-control" id="sugar" name="sugar" placeholder="Enter sugar">
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <button type="submit" class="btn btn-primary">Get Recommendations</button>
+        </div>
+      </form>
+      
+    </div>
     {% endblock %}
 
     <!-- Footer -->
