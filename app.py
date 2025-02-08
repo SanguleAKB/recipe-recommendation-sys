@@ -3,15 +3,17 @@ from models import word2vec_model,query_embedding,recipe_embeddings,get_top_ingr
 from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 import numpy as np
-from tensorflow.keras.models import load_model
+import tensorflow as tf
 app = Flask(__name__)
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 
 @app.route('/')
 def index():
     return render_template("base.html")
 
-ann_model = load_model('model.h5')
+ann_model = tf.keras.models.load_model('my_model.keras')
 
 @app.route('/find_result', methods=['GET', 'POST'])
 def find(): 
@@ -83,5 +85,5 @@ def predict():
 
 
 
-if __name__=="__main__":
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=50000, threaded=True)

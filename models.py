@@ -10,7 +10,13 @@ import os
 CHART_PATH = os.path.join('static', 'top_ingredients_chart.png')
 PIE_CHART_PATH = os.path.join('static', 'pie_chart.png')
 
-word2vec_model = Word2Vec.load('word2vec_cbow.model')
+# Load the old model
+model = Word2Vec.load('word2vec_cbow.model')
+
+# Save the model again with the new version of gensim
+model.save('word2vec_cbow_new.model')
+
+word2vec_model = Word2Vec.load('word2vec_cbow_new.model')
 recipes = pd.read_csv('clean_DF.csv')
 recipes['IngredientList'] = recipes['IngredientList'].apply(ast.literal_eval)
 
