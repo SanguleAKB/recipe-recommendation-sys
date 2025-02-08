@@ -52,7 +52,7 @@ By using Docker, you can ensure that the environment in which the application is
 My project is composed of different services (frontend,API). Therefore, our application should run on multiple containers. With the help of Docker-compose we can share our application using the yaml file that define the services that runs together.
 
 ### Project Architecture
-
+  https://github.com/SanguleAKB/recipe-recommendation-sys/blob/main/Assets/architecture.png
 
 ## Data Processing:
 - Pandas: For data manipulation and analysis.
