@@ -69,3 +69,21 @@ My project is composed of different services (frontend,API). Therefore, our appl
 - Users specify their nutritional requirements (e.g., high protein, low fat).
 - The system uses an ANN to analyze the nutritional content of recipes and recommend the best matches.
 
+## Interface 
+![image](https://github.com/user-attachments/assets/bdf75bdc-383d-40bc-b92d-45207b2387f8)
+
+#### When serach for high protein 
+![image](https://github.com/user-attachments/assets/c7fbf9c5-3558-4824-b1bb-73b160affd0f)
+
+##### When Search Just for milk 
+![image](https://github.com/user-attachments/assets/11ac8b21-f1fc-499e-8ab1-63acf91260ac)
+
+#### Detail view 
+![image](https://github.com/user-attachments/assets/c1108b4f-10a9-40da-93a4-de30f5c23531)
+
+## 🐳 Setup
+  ### Run it locally
+  #### Clone the repo
+    https://github.com/SanguleAKB/recipe-recommendation-sys
+  #### Clone docker hub  repo
+    docker pull aniruddhasangule/recipe-app  
