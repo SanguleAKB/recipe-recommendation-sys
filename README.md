@@ -52,7 +52,8 @@ By using Docker, you can ensure that the environment in which the application is
 My project is composed of different services (frontend,API). Therefore, our application should run on multiple containers. With the help of Docker-compose we can share our application using the yaml file that define the services that runs together.
 
 ### Project Architecture
-![architecture](https://github.com/user-attachments/assets/b36f6b15-4d23-43a4-a9ed-ba6baed4b974)
+![project](https://github.com/user-attachments/assets/60568b3d-de63-495c-98bc-4a18cd1fa9fa)
+
 
 
 ## Data Processing:
